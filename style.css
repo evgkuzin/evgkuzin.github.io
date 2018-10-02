@@ -1,0 +1,29 @@
+.card {
+	text-align: center;
+	margin-top: 15px;
+	width: 18rem;
+}
+#about {
+	width: 22rem;
+	margin-bottom: 20px;
+	border: none;
+}
+#content-card {
+	margin: 10px;
+}
+.social {
+	margin-top: 15px;
+}
+.footer-copyright {
+	margin-top: 20px;
+	font-size: 80%;
+}
+p, h1, h2, h3, h4, h5, a {
+	font-family: 'Quicksand', sans-serif;
+}
+h5 {
+	font-weight: bold;
+}
+a:active, a:hover, a:focus {
+   text-decoration: none;
+}
