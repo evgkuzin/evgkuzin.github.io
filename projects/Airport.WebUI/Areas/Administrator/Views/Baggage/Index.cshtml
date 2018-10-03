@@ -1,0 +1,49 @@
+﻿@using Airport.WebUI.Models
+
+@{
+
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Поиск багажа</h2>
+
+@using (Html.BeginForm("Index", "Baggage", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Введите код багажа пассажира:</h4>
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-10">
+                <input id="codeword" name="codeword" type="text" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Найти" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <h2>@ViewBag.Info</h2>
+        @if (ViewBag.Data != null)
+        {
+            var item = (PassengerFlight)ViewBag.Data;
+            <h4>Код багажа: @item.BaggageCode.ToString()</h4>
+            <p>Пассажир: @item.Passenger.FirstName @item.Passenger.MiddleName @item.Passenger.LastName</p>
+            <p>Паспорт: @item.Passenger.Passport</p>
+            <p>Рейс: @ViewBag.aD - @item.Flight.Airport.City </p>
+            <p>Дата: @item.DateDeparture.ToString("dd.MM.yyyy")</p>
+        }
+
+    </div>
+</div>
+
+                    

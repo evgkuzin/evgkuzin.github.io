@@ -1,0 +1,31 @@
+﻿@{
+    string[,] block_2 = {
+        { "Home" , "Статистика", "Administrator"},
+        { "Registration" , "Регистрация пассажира", "Administrator"},
+        { "Passengers" , "Информация о пассажирах", "Administrator"},
+        { "Baggage" , "Поиск BagTracker", "Administrator"},
+        { "Countries" , "Страны", "Administrator"},
+        { "Airports" , "Аэропорты", "Administrator"},
+        { "Flights" , "Рейсы", "Administrator"},
+    };
+}
+
+<!--Menu-->
+
+<div class="list-group">
+    @{
+        for (int i = 0; i <= block_2.GetUpperBound(0); i++)
+        {
+            if (User.IsInRole(block_2[i, 2]))
+            {
+                string _class;
+                _class = (string)ViewBag.Conroller == block_2[i, 0] ? "active" : "inactive";
+                <a href="/Administrator/@block_2[i, 0]" class="list-group-item list-group-item-action @_class">
+                    @block_2[i, 1]
+                </a>
+            }
+        }
+    }
+</div>
+
+<!--End menu-->

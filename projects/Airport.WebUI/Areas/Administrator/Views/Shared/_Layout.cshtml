@@ -1,0 +1,53 @@
+﻿@using Microsoft.AspNet.Identity
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рабочий кабинет — ACS</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+
+    <div class="container" style="padding-bottom:20px;">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Рабочий кабинет</h2>
+                <a href="~/">Вернуться на главную</a>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-4">
+                @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                {
+                    @Html.AntiForgeryToken()
+                    <p>Пользователь: @User.Identity.GetUserName()   <a href="javascript:document.getElementById('logoutForm').submit()">Выход</a></p>
+                }
+            </div>
+        </div>
+        <hr />
+    </div>
+    <div class="container body-content">
+        <div class="row">
+            <div class="col-md-3">
+                @{Html.RenderAction("_Menu", "_Partials", new { controllerName = (string)ViewBag.Controller });}
+            </div>
+            <div class="col-md-9">
+                @RenderBody()
+            </div>
+        </div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Система коммуникации ACS</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

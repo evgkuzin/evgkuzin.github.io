@@ -1,0 +1,46 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@{
+    string myStringVariable = string.Empty;
+    myStringVariable = "Welcome";
+    Page.ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + myStringVariable + "');", true);
+}
+<div class="jumbotron">
+    <h1 class="display-3">Airport Communication System (ACS)</h1>
+    <p class="lead">Данная система предназначена для коммуникации департаментов авиапредприятия. В частности, департаментов регистрации пассажиров и багажной логистики. ACS обеспечивает быстрый поиск багажа по QR-коду бирки, требующего досмотр или приглашения пассажира, что позволяет повысить качество и скорость обслуживания.</p>
+    <hr class="my-4">
+    <p>Курсовая работа студентов ЭВМ 4-1</p>
+    <p class="lead">
+        <a class="btn btn-primary btn-lg" href="#" role="button">О системе</a>
+    </p>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">Разработка, UI/UX</div>
+            <div class="card-body">
+                <h4 class="card-title">Кузин Евгений</h4>
+                <p class="card-text">Пара слов о себе.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">DB, CSS</div>
+            <div class="card-body">
+                <h4 class="card-title">Амирова Алина</h4>
+                <p class="card-text">Пара слов о себе</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card border-primary mb-3" style="max-width: 20rem;">
+            <div class="card-header">ASP.NET, Bootstrap</div>
+            <div class="card-body">
+                <h4 class="card-title">Евинова Мария</h4>
+                <p class="card-text">Пара слов о себе</p>
+            </div>
+        </div>
+    </div>
+</div>

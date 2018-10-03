@@ -1,0 +1,72 @@
+﻿@using Airport.WebUI.Models
+@model Passenger
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Успешная регистрация!</h2>
+
+<div>
+    <h4>Данные пассажира:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Фамилия:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            Имя:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            Отчество:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            Паспорт:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Passport)
+        </dd>
+
+        <dt>
+            Багаж
+        </dt>
+
+        @{
+        var pf = (PassengerFlight)ViewBag.Data;
+        if (pf.BaggageCode == null)
+        {
+            <dd>
+                Только ручная кладь
+            </dd>
+    }
+    else
+    {
+        <dd>
+            Код багажа: @pf.BaggageCode.ToString()
+        </dd>
+}
+        }
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Новый пассажир", "Index") |
+    @Html.ActionLink("К списку пассажиров", "index", "Passengers")
+</p>

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Airport.WebUI.Models.Passenger>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Список пассажиров</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            Фамилия
+        </th>
+        <th>
+            Имя
+        </th>
+        <th>
+            Отчество
+        </th>
+        <th>
+            Паспорт
+        </th>
+        <th>
+            Багаж
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiddleName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Passport)
+        </td>
+        <td>
+            @{
+            string txt;
+            var bC = item.PassengerFlights.First().BaggageCode;
+            if (bC == null)
+            {
+                txt = "Только ручная кладь";
+            }
+            else
+            {
+                txt = bC.ToString();
+            }
+            }
+            @txt
+        </td>
+    </tr>
+}
+
+</table>

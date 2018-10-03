@@ -1,0 +1,66 @@
+﻿@using Microsoft.AspNet.Identity
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airport Communication System</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="~/">ACS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation" style="">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+
+                    <li class="nav-item">
+                        @Html.ActionLink("Главная", "Index", null, new { @class = "nav-link active" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Помощь", "About", null, new { @class = "nav-link active" })
+                    </li>
+                    <li class="nav-item">
+                        @Html.ActionLink("Контакты", "Contacts", null, new { @class = "nav-link active" })
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    @if (Request.IsAuthenticated)
+            {
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-info">@Html.RouteLink("Войти в рабочий кабинет", "Administrator_default")</button>
+                        </div>
+                        <div class="offset-3 col-md-6">
+                            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+                {
+                                @Html.AntiForgeryToken()
+                                <p>Пользователь: @User.Identity.GetUserName()   <a href="javascript:document.getElementById('logoutForm').submit()">Выход</a></p>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                 <div margin:0 auto;>
+                            @Html.ActionLink("Регистрация в системе ACS", "Register", "Administrator/Account", routeValues: null, htmlAttributes: new { id = "registerLink", @class = "btn btn-info my-2 my-sm-0 btn-sm" })                     
+                            @Html.ActionLink("Вход в систему", "Login", "Administrator/Account", routeValues: null, htmlAttributes: new { id = "loginLink", @class= "btn btn-info my-2 my-sm-0 btn-sm" })
+                    </div>
+                       }
+                </form>
+            </div> 
+         </nav>
+    </div>
+    <p></p>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Система коммуникации ACS</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,74 @@
+﻿@using Airport.WebUI.Models
+@model IEnumerable<Flight>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Administrator/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Расписание рейсов</h2>
+
+<p>
+    @Html.ActionLink("Добавить", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Аэропорт вылета
+        </th>
+        <th>
+            Аэропорт прибытия
+        </th>
+        <th>
+            Время вылета
+        </th>
+        <th>
+            Время прибытия
+        </th>
+        <th>
+            Код рейса
+        </th>
+        <th>
+            Тип воздушного судна
+        </th>
+        <th>
+            Дополнительная информация
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @{
+                var aD=(IEnumerable<Airport>)ViewBag.Airports;
+                var a = aD.FirstOrDefault(x => x.Id == item.AirportDepartureId);
+                    }
+            @a.City
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Airport.City)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeDeparture)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeArrival)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FlightCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AircraftType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AdditionalInformation)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
