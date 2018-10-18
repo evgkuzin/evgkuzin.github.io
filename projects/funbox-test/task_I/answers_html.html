@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1671">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Light'; min-height: 22.0px}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Light'}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica; min-height: 22.0px}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Light'; color: #1b1f22; -webkit-text-stroke: #1b1f22}
+    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Light'; color: #1b1f22; -webkit-text-stroke: #1b1f22; min-height: 22.0px}
+    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px Helvetica; color: #1b1f22; -webkit-text-stroke: #1b1f22}
+    li.li3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Light'}
+    span.s1 {font: 18.0px 'Helvetica Light'}
+    span.s2 {font: 18.0px Helvetica}
+    span.s3 {color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s4 {font-kerning: none}
+    span.Apple-tab-span {white-space:pre}
+    ul.ul1 {list-style-type: disc}
+  </style>
+</head>
+<body>
+<p class="p1"><b>Q1:</b><span class="s1"><span class="Apple-converted-space"> </span></span></p>
+<p class="p2"><br></p>
+<ul class="ul1">
+  <li class="li3">С точки зрения пользователя, плохая верстка может выражаться в неудобном, беспорядочном расположении элементов страницы. Например, могут возникнуть сложности с навигацией (не понятно, где меню и как оно работает), индикацией (не понятно, выбран элемент или нет) и восприятием информации (броские цвета, разное направление текста, отсутствие мобильной версии).</li>
+  <li class="li3">С точки зрения менеджера проекта: несоответствие изначальному техническому заданию, плану веб-страницы и функций, которые она должна была выполнять.</li>
+  <li class="li3">С точки зрения дизайнера: неверно подобранная цветовая схема страницы, некорректное отображение значков, кнопок и др.элементов страницы.</li>
+  <li class="li3">С точки зрения верстальщика: мусорные теги, лишние классы, безобразная структура проекта и грязный код (с излишней или недостающей табуляцией).</li>
+  <li class="li3">С точки зрения клиентского программиста: неверные теги элементов (вместо заголовка просто текст с отдельным стилем, лишние ссылки внутри head и др.).</li>
+  <li class="li3">С точки зрения серверного программиста: использование устаревших технологий/неверно подобранный стек технологий.</li>
+</ul>
+<p class="p2"><br></p>
+<p class="p3">_____</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Q2:<span class="Apple-converted-space"> </span></b></p>
+<p class="p4"><span class="Apple-tab-span">	</span></p>
+<p class="p3"><span class="s2"><span class="Apple-tab-span">	</span></span>При верстке крупных и многостраничных проектов важно делать акцент на их расширяемость. Например, более детальное структурирование самих файлов проекта или комментирование частей кода для того, чтобы не потеряться в огромном количестве файлов, и чтоб кто-то, кроме самого верстальщика смог потом в этом коде разобраться.</p>
+<p class="p3"><span class="Apple-tab-span">	</span>Я сталкивался с подобным только при написании дипломной работы в университете. Это был проект на ASP.NET MVC 5. И, собственно, писал я его в Visual Studio с программными расширениями Identity и Entity Framework. Собственно, сам VS обеспечивает довольно удобное структурирование программных файлов, а Entity, например, самой базы данных. В итоге, если в процессе согласования с преподавателем появлялась необходимость добавить какой-то функционал и т.п., проблем не возникало, так как не затрагивались уже существующие файлы, нужно было просто добавить новый каталог, новую ассоциацию с Entity и писать программные файлы.</p>
+<p class="p3">_____</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Q3:</b></p>
+<p class="p4"><b><span class="Apple-tab-span">	</span></b></p>
+<p class="p3"><span class="s2"><b><span class="Apple-tab-span">	</span></b></span>При верстке под различные устройства важно учитывать особенности каждого их них. У разных браузеров свои интерпретаторы. Хоть стандарт один, во-первых, не все браузеры поддерживают новейшие свойства/атрибуты и т.д., во-вторых, если и поддерживают, то синтаксис может отличаться.</p>
+<p class="p3"><span class="Apple-tab-span">	</span>Чтобы проверить правильность отображения всех элементов можно воспользоваться множеством сервисов, созданных для этого. Например, в Chrome при просмотре кода есть специальный интерфейс, позволяющий выбрать устройство и посмотреть, как с учетом его размеров экрана будет отображаться сайт. А для функций и атрибутов я пользуюсь https://caniuse.com.</p>
+<p class="p3">_____</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Q4:</b></p>
+<p class="p4"><b><span class="Apple-tab-span">	</span></b></p>
+<p class="p3"><span class="s2"><b><span class="Apple-tab-span">	</span></b></span>Для непосредственно написания кода я использую Sublime или Atom. И в том, и в другом установлен Emmet, который неплохо помогает сократить рутинный набор разными макросами.</p>
+<p class="p3"><span class="Apple-tab-span">	</span>А если глобально, то часто использую Bootstrap для разметки. Хотя, иногда и для базового дизайна.</p>
+<p class="p3">_____</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Q5:</b></p>
+<p class="p4"><b></b><br></p>
+<p class="p3"><span class="Apple-tab-span">	</span>Доступ к исходному всегда можно получить :) в Chrome, например. И посмотреть, какие параметры и атрибуты там используются. Скорее всего, это будет связано с WebKit’ом.</p>
+<p class="p3"><span class="Apple-tab-span">	</span>На практике с подобным сталкивался, когда нужно было изменить внешний вид скролла. Тогда возникли проблемы с Safari, как раз. В итоге, я просто загуглил, как правильно указывать эти свойства для этого браузера и добавил в код.</p>
+<p class="p3">_____</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Q6:</b></p>
+<p class="p4"><b></b><br></p>
+<p class="p3"><span class="s2"><b><span class="Apple-tab-span">	</span></b></span>Всегда можно уточнить что-то повторно. Если такой возможности не будет, сделаю на свое усмотрение что-то в стиле: если кнопка с прозрачным фоном, его можно залить при наведении, или подсветить внешней тенью и т.п.</p>
+<p class="p3">_____</p>
+<p class="p2"><br></p>
+<p class="p1"><b>Q7:</b></p>
+<p class="p4"><b></b><br></p>
+<p class="p3"><span class="s2"><b><span class="Apple-tab-span">	</span></b></span>Сейчас я прохожу курсы на Udemy. До этого смотрел видео-уроки на YouTube. Хотя, когда учил в университете C++/C# даже книжки читал, но это в прошлом.</p>
+<p class="p3"><span class="Apple-tab-span">	</span>Какую-то часть информации черпаю с разных пабликов ВК или Телеграм. Есть очень классный паблик Библиотека программиста (https://vk.com/proglib). Иногда ворую оттуда что-нибудь, но и лицензию приобретаю тоже, так что совесть чиста :)</p>
+<p class="p5"><span class="s3"><span class="Apple-tab-span">	</span>Буквально вчера наткнулся на книгу </span><span class="s4">You Don't Know JS. Из интересного: она опубликована на GitHub (https://github.com/getify/You-Dont-Know-JS) и, вроде как, каждый желающий может вносить правки, либо просто читать.<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s4">_____</span></p>
+<p class="p6"><span class="s4"></span><br></p>
+<p class="p7"><span class="s4"><b>Q8:</b></span></p>
+<p class="p6"><span class="s4"><span class="Apple-tab-span">	</span></span></p>
+<p class="p5"><span class="s4"><span class="Apple-tab-span">	</span>Мне 22 года, я этим летом только закончил университет, в котором занимался программированием под Windows/Linux и т.п. Там же заинтересовался вебом и, собственно, диплом писал под эту сферу.<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s4"><span class="Apple-tab-span">	</span>В сентябре я ушел из компании Mamba (которая для знакомств) и уехал в Израиль, где и сейчас нахожусь. Изучаю все, что так или иначе относится к web-разработке и пытаюсь как можно скорее закончить курс на Udemy, чтобы стать более-менее full stack’ом.<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s4"><span class="Apple-tab-span">	</span>Параллельно ищу различные вакансии, требования к ним.<span class="Apple-converted-space"> </span></span></p>
+<p class="p5"><span class="s4"><span class="Apple-tab-span">	</span>Предел моих мечтаний: ментор в лице работодателя, под руководством которого я бы смог набраться опыта, еще подучиться, чтобы дальше расти в этой сфере. Сейчас иногда возникают ситуации, когда хочется что-то сверстать, но идей или инструментов не хватает. Приходится ограничиваться заданиями из курса.</span></p>
+<p class="p5"><span class="s4"><span class="Apple-tab-span">	</span>Также, хотел отметить, что я слабо знаю JS. Думаю, по моему тестовому заданию это и так станет ясно. В свое оправдание вернусь к тому, что только недавно начал его изучать. Там на моем GitHub есть еще один проект с его использованием. К сожалению, это мой максимум на данный момент.</span></p>
+<p class="p5"><span class="s4">_____</span></p>
+<p class="p6"><span class="s4"></span><br></p>
+<p class="p5"><span class="s4">Моя персональная страница: https://evgkuzin.ru</span></p>
+<p class="p5"><span class="s4">Мой GitHub лэндинг: https://evgkuzin.github.io</span></p>
+</body>
+</html>
