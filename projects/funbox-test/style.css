@@ -1,0 +1,152 @@
+body {
+    background-image: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0) 50%, #000000), url("img/pattern.png");
+    font-family: TrebuchetMS;
+}
+
+h1 {
+	text-shadow: 0 1px 1px #000000;
+  font-size: 36px;
+	font-weight: 100;
+ 	text-align: center;
+ 	color: #ffffff;
+ 	margin-top: 36px;
+  font-family: 'Exo 2 Thin';
+}
+
+a {
+  text-decoration: none; 
+  border-bottom: 1px dashed #1698d9;
+}
+
+.itemSubtitle {
+  margin-left: 51px;
+  margin-top: 21px;
+  margin-bottom: 0px;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #666666;
+}
+
+.itemTitle {
+  margin-left: 48px;
+  margin-bottom: 0px;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.taste {
+  margin-left: 51px;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.card {
+  margin: 15px;
+  margin-bottom: 30px;
+  background-color: transparent;
+  background-image: url("img/back.png");
+  background-repeat: no-repeat;
+}
+
+.card-body {
+  padding: 0px;
+}
+
+.card-text {
+  margin-left: 30px;
+
+}
+
+.bonus {
+  margin-left: 51px;
+  width: 127px;
+  height: 32px;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.14;
+  letter-spacing: normal;
+  color: #666666;
+}
+
+.bonus .text-style-1 {
+  font-weight: bold;
+}
+
+.oval {
+  margin: 210px 16px 16px 220px;
+  border-radius: 50px;
+  width: 80px;
+  height: 80px;
+  background-color: #1698d9;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.05;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding-left: 5px;
+}
+
+.weight {
+  position: relative;
+  bottom: 75px;
+  margin: 0px 16px 16px 220px;
+  font-size: 42px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.52;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.weight_d {
+  position: relative;
+  bottom: 85px;
+  left: 103px;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.05;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.item-footer {
+  position: relative;
+  bottom: 65px;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+@font-face {
+  font-family: 'Exo 2 Thin';
+  src: url(fonts/Exo2.0-Thin.otf);
+}
